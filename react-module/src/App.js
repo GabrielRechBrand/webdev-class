@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
-
+import sunIcon from './assets/sun.png';
+import CalculatorComponent from './components/CalculatorComponent';
+import FormComponent from "./components/FormComponent";
 function App() {
+
+    const toggleThene = () => {
+        const body = document.body;
+        if (body.classList.contains("dark-theme")) {
+            body.classList.remove("dark-theme");
+        } else {
+            body.classList.add("dark-theme");
+        }
+    }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+        <div className="theme-toggle button" onClick={toggleThene}>
+        </div>
+        <FormComponent />
     </div>
   );
 }

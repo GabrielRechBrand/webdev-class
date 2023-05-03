@@ -14,7 +14,7 @@ function FormComponent() {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Add the user data to the array
-        if(name.em)
+        if(name !== '')
         setUsers([...users, { name, age, gender, height, weight }]);
         // Reset the form inputs
         setName('');

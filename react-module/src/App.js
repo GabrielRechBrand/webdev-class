@@ -1,7 +1,6 @@
 import './App.css';
-import sunIcon from './assets/sun.png';
-import CalculatorComponent from './components/CalculatorComponent';
-import FormComponent from "./components/FormComponent";
+
+import MovieListComponent from "./components/MovieListComponent";
 function App() {
 
     const toggleThene = () => {
@@ -17,7 +16,7 @@ function App() {
     <div className="app">
         <div className="theme-toggle button" onClick={toggleThene}>
         </div>
-        <FormComponent />
+        <MovieListComponent />
     </div>
   );
 }

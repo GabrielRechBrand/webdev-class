@@ -5,8 +5,12 @@ html, body, .app {
   margin-top: 60px;
 }
 
-.dark-theme {
+.dark-theme, .dark-theme th {
   background-color: #2f2f2f !important;
+  color: white !important;
+}
+
+.dark-theme td {
   color: white !important;
 }
 

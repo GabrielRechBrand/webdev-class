@@ -1,7 +1,12 @@
 import axios from "axios";
 
-const api = axios.create({
-    baseURL: "https://api.tvmaze.com/search/shows?q=star%20trek"
-});
+const BASE_URL = "https://api.tvmaze.com/search/shows";
 
-export default api;
+function searchShows(query) {
+    const encodedQuery = encodeURIComponent(query);
+    const url = `${BASE_URL}?q=${encodedQuery}`;
+
+    return axios.get(url);
+}
+
+export default searchShows;
